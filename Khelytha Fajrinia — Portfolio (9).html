@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)file:///D:/khelytha/tugas%20portofolio.html -->
+<html lang="id"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Khelytha Fajrinia — Portfolio</title>
+  <link href="./Khelytha Fajrinia — Portfolio_files/css2" rel="stylesheet">
+  <style>
+    :root{
+      --bg-1:#0b0c10; --bg-2:#000; --fg:#e5e7eb; --muted:#a1a1aa; --accent:#7ef8c9; --accent-2:#a0ff4f;
+      --glass:rgba(255,255,255,.06); --glass-stroke:rgba(255,255,255,.15);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;background:radial-gradient(1200px 600px at 50% -10%, #101318 0%, var(--bg-1) 35%, var(--bg-2) 100%);color:var(--fg);overflow-x:hidden}
+
+    /* CRT scanlines + subtle noise */
+    .crt::before{content:"";position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.08) 1px,transparent 3px,transparent 4px);mix-blend:overlay;opacity:.18}
+    .crt::after{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 50%,transparent 60%, rgba(0,0,0,.65));}
+    .glow{ text-shadow:0 0 6px rgba(255,255,255,.28),0 0 22px rgba(126,248,201,.25),0 0 42px rgba(160,255,79,.18); }
+    .pixel{ font-family:"Press Start 2P", monospace; letter-spacing:1px; }
+
+    header{position:sticky;top:0;z-index:20;backdrop-filter:blur(6px);background:linear-gradient( to bottom, rgba(0,0,0,.6), rgba(0,0,0,0)); border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800}
+    .badge{font-size:12px;padding:6px 10px;border-radius:999px;background:var(--glass);border:1px solid var(--glass-stroke)}
+    .menu-btn{display:inline-flex;width:42px;height:42px;border-radius:12px;background:var(--glass);border:1px solid var(--glass-stroke);align-items:center;justify-content:center;color:var(--fg)}
+
+    .container{max-width:1100px;margin:auto;padding:0 20px}
+
+    /* HERO */
+    .hero{position:relative;display:grid;place-items:center;min-height:92vh;text-align:center}
+    .hero h1{font-size:clamp(34px,7vw,72px);line-height:1.05;margin:8px 0 6px}
+    .hero .sub{font-size:clamp(18px,3.6vw,32px);opacity:.9;margin:0 0 18px}
+    .start{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:16px;background:linear-gradient(180deg,#0b2a20,#0e3727);border:1px solid rgba(126,248,201,.35); color:var(--fg);font-weight:700;box-shadow:0 0 32px rgba(126,248,201,.18) inset,0 0 28px rgba(126,248,201,.16)}
+    .start .bolt{width:22px;height:22px;border-radius:6px;background:rgba(126,248,201,.15);display:grid;place-items:center;border:1px solid rgba(126,248,201,.35)}
+
+    .pill{display:inline-flex;align-items:center;gap:10px;padding:8px 12px;border-radius:12px;background:rgba(220,38,38,.14);border:1px solid rgba(220,38,38,.35);font-size:14px;margin-top:14px}
+    .tag{display:inline-flex;align-items:center;gap:8px;margin:12px auto 0;padding:8px 12px;border-radius:999px;background:rgba(126,248,201,.12);border:1px solid rgba(126,248,201,.35);font-size:14px}
+    .hash{opacity:.7;margin-top:8px;font-size:14px}
+
+    /* ABOUT */
+    section{padding:72px 0}
+    .card{background:var(--glass);border:1px solid var(--glass-stroke);border-radius:22px;padding:28px;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+    .about-title{font-size:clamp(28px,5vw,46px)}
+    .about-p{color:var(--muted);font-size:18px;line-height:1.8}
+
+    /* FOOTER */
+    footer{padding:48px 0;color:var(--muted);text-align:center}
+
+    /* MOBILE NAV (optional) */
+    #navLinks{display:none}
+    @media (min-width:840px){#navLinks{display:flex;gap:18px;align-items:center}}
+    .link{opacity:.9}
+    .link:hover{opacity:1}
+  </style>
+</head>
+<body class="crt">
+  <header>
+    <nav class="nav">
+      <button class="menu-btn" aria-label="Menu" onclick="toggleMenu()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+      <div class="logo">
+        <span class="pixel glow" style="font-size:18px;">KHELYTHA</span>
+      </div>
+      <div id="navLinks">
+        <a class="link" href="file:///D:/khelytha/tugas%20portofolio.html#home">Beranda</a>
+        <a class="link" href="file:///D:/khelytha/tugas%20portofolio.html#about">Tentang</a>
+        <a class="link" href="file:///D:/khelytha/tugas%20portofolio.html#contact">Kontak</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero container">
+      <div>
+        <div class="badge pixel" style="display:inline-flex;align-items:center;gap:10px">
+        </div>
+        <h1 class="pixel glow">Hi, Welcome</h1>
+        <p class="sub pixel">Khelytha<span title="CSS dingin"></span></p>
+        <a href="file:///D:/khelytha/tugas%20portofolio.html#about" class="start" role="button">
+          <span class="bolt">⚡</span>
+          <span class="pixel">Start</span>
+        </a>
+        <div class="pill" role="note">
+          <strong style="margin-right:6px">Info</strong>
+          <span>Ini adalah website yang dibuat oleh</span>
+          <span class="tag"><span style="font-weight:700"></span> <strong>khelytha</strong></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="container">
+      <div class="card">
+        <h2 class="about-title pixel glow" style="margin-top:0">About Me</h2>
+        <p class="about-p">Saya <strong>Khelytha Fajrinia</strong>,siswi kelas 10 RPl, Saya memiliki ketertarikan pada bidang perangkat lunak dan komputer, saya ingin belajar lebih mendalam tentang coding, pembuatan aplikasi, mengembangkan website, dan memahami dasar dasar keamanan informasi di dunia digital</p>
+        <div style="margin-top:18px"></div>
+    </div></section>
+
+    <!-- CONTACT / FOOTER ANCHOR -->
+    <section id="contact" class="container">
+      <div class="card" style="display:grid;gap:12px">
+        <h3 class="pixel glow" style="margin:0;font-size:22px">Kontak</h3>
+        <p class="about-p" style="margin:0">Kirim pesan ke <a href="mailto:khelytha@example.com">khelytha@gmail.com</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function toggleMenu(){
+      const nav = document.getElementById('navLinks');
+      const visible = getComputedStyle(nav).display !== 'none';
+      if(visible){ nav.style.display = 'none'; }
+      else{ nav.style.display = 'flex'; nav.style.flexDirection = 'column'; nav.style.gap = '12px'; }
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+
+
+
+
+  
+  <title>Khelytha Fajrinia — Portfolio Retro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="./Khelytha Fajrinia — Portfolio_files/css2" rel="stylesheet">
+  <style>
+    :root{
+      --bg0: #0b0c10; --bg1:#101318; --fg:#e5e7eb; --muted:#a1a1aa;
+      --accent:#7ef8c9; --glass:rgba(255,255,255,.06); --glass-stroke:rgba(255,255,255,.15);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;font-family:Inter,sans-serif;}
+    body{
+      background:radial-gradient(circle at top, var(--bg1) 0%, var(--bg0) 80%);
+      color: var(--fg);
+      overflow-x: hidden;
+    }
+    .crt::before{
+      content:"";position:fixed;inset:0;pointer-events:none;
+      background:repeating-linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.08) 1px,transparent 3px,transparent 4px);
+      mix-blend-mode:overlay;opacity:.18;
+    }
+    .crt::after{
+      content:"";position:fixed;inset:0;pointer-events:none;
+      background:radial-gradient(circle at center,transparent 60%,rgba(0,0,0,.65));
+    }
+    .pixel{font-family:"Press Start 2P",monospace;letter-spacing:1px;}
+    .glow{text-shadow:0 0 6px rgba(255,255,255,.3),0 0 22px var(--accent),0 0 42px var(--accent);}
+    header{position:sticky;top:0;padding:16px;background:rgba(0,0,0,.3);backdrop-filter:blur(6px);z-index:10;}
+    nav{max-width:900px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
+    nav .logo{font-size:18px;font-weight:800;}
+    nav .logo span:nth-child(2){color:var(--accent);}
+    nav .menu{display:none;}
+    @media(min-width:768px){nav .menu{display:flex;gap:16px;}}
+    nav .menu a{color:var(--fg);text-decoration:none;font-size:14px;opacity:.9;}
+    nav .menu a:hover{opacity:1;}
+    section{padding:60px 20px;max-width:900px;margin:0 auto;opacity:0;transform:translateY(20px);animation:fadeUp 0.8s forwards;}
+    section:nth-child(2){animation-delay:0.2s;}
+    section:nth-child(3){animation-delay:0.4s;}
+    section:nth-child(4){animation-delay:0.6s;}
+    section:nth-child(5){animation-delay:0.8s;}
+    @keyframes fadeUp{
+      to{opacity:1;transform:translateY(0);}
+    }
+    h1, h2, h3{margin-bottom:16px;}
+    .btn{display:inline-block;padding:10px 16px;background:var(--accent);color:#000;text-decoration:none;font-weight:600;border-radius:6px;margin-top:12px;transition:transform .2s;}
+    .btn:hover{transform:scale(1.05);}
+    ul{list-style:none;margin-top:8px;}
+    ul li::before{content:'• ';color:var(--accent);}
+    .footer{text-align:center;padding:40px 0;font-size:14px;color:var(--muted);}
+  </style>
+
+
+  <header>
+
+  <section id="skills">
+    <h2 class="pixel glow">Keahlian Saya</h2><ul>
+      <li>pemrograman dasar</li>
+      <li>basis data</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2 class="pixel glow">Proyek Saya</h2>
+    <h3 class="pixel glow">Website Portfolio</h3>
+    <p>Membangun website portfolio pribadi</p><p>
+    </p><p>Menggunakan HTML, CSS, dan JavaScript.</p>
+  </section>
+
+  <section id="contact">
+    <h2 class="pixel glow">Kontak</h2>
+    <p>Email: khelytha@gmail.com</p>
+    <p>Telepon: +62 856 4894 9496</p>
+  </section>
+
+  <div class="footer pixel">© <span id="year">2025</span> Khelytha Fajrinia.</div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</header></body></html>
